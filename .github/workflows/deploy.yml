@@ -89,7 +89,7 @@ jobs:
         id: web-task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: ${{ steps.app-task-def.outputs.task-definition }}
+          task-definition: ${{ lara-app-task-def.outputs.task-definition }}
           container-name: nginx
           image: 876828831662.dkr.ecr.ap-northeast-1.amazonaws.com/nginx:latest
 
